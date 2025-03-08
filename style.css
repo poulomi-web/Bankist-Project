@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background-color: #f3f3f3;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 2rem;
+}
+
+.curr-user {
+  font-weight: bold;
+}
+
+.bank-logo {
+  height: 5rem;
+  /* margin-right: 2rem; */
+}
+
+.login-input {
+  width: 9rem;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  border: solid rgba(0, 0, 0, 0.23) 0.1rem;
+  text-align: center;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+/* ************************** Header ************************************ */
+
+.mainsection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto repeat(3, 12rem) auto;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  opacity: 0;
+}
+
+.header-balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.curr-bal {
+  grid-column: 1;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.account-bal {
+  grid-column: 2 / span 3;
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+/* ***************************** Transactions*********************************** */
+.movements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transactions {
+  grid-row: 2 / span 3;
+  overflow: scroll;
+}
+
+.transactions-total {
+  background-color: antiquewhite;
+}
+
+.movements {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  gap: 1rem;
+  background-color: #fff;
+  border-bottom: solid #bac8ff 0.2rem;
+}
+
+.amount,
+.date {
+  font-size: 1.5rem;
+}
+
+.amount {
+  justify-self: flex-end;
+  margin-right: 2rem;
+}
+
+.transaction-type {
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  margin: 0 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.movements--deposit .transaction-type {
+  background-color: #40c057;
+}
+
+.movements--withdrawal .transaction-type {
+  background-color: #ff8787;
+}
+
+/* ********************************* Actions ********************************* */
+
+.transfer {
+  background: linear-gradient(to top left, #74c0fc, #0c8599);
+}
+
+.loan {
+  background: linear-gradient(to top left, #ffa94d, #fd7e14);
+}
+
+.close-acc {
+  background: linear-gradient(to top left, #ff8787, #f03e3e);
+}
+
+.actions {
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  padding: 2rem;
+  column-gap: 0.5rem;
+  justify-items: center;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: white;
+  border-radius: 0.7rem;
+  padding: 0.3rem;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+label {
+  font-weight: bold;
+  padding-top: 0.2rem;
+}
+
+.btn-enter {
+  padding: 0 0.2rem;
+  width: 2rem;
+  margin-right: auto;
+}
+
+.loan-amount {
+  grid-row: 2;
+}
+
+/* ********************************************* SUMMARY ************************************* */
+
+.summary {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.summary-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.summary-param,
+.log-off-timer,
+.sort {
+  font-size: 1.5rem;
+  align-items: baseline;
+}
+
+.inflow,
+.outflow,
+.interest {
+  color: red;
+  font-size: 2rem;
+  padding-left: 0.2rem;
+}
+
+.sort {
+  margin-left: 20rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sort:hover {
+  background-color: rgba(255, 255, 0, 0.405);
+}
+
+.log-off-timer {
+  margin-left: auto;
+}

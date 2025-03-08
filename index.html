@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bankist</title>
+    <link rel="shortcut icon" type="image/png" href="logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navigation">
+      <p class="welcomeMessage">Please log in to get started</p>
+      <img src="logo.png" class="bank-logo" alt="Bankist bank logo" />
+      <div>
+        <input
+          type="text"
+          class="login-input username"
+          name="username"
+          placeholder="username"
+        />
+        <input
+          type="text"
+          class="login-input PIN"
+          name="PIN"
+          placeholder="PIN"
+        />
+        <button class="btnEnter">&rarr;</button>
+      </div>
+    </nav>
+
+    <main class="container mainsection">
+      <section class="header-balance">
+        <div class="curr-bal">
+          <p>Current balance</p>
+          <p class="cur-date">08/08/2024</p>
+        </div>
+        <p class="account-bal">29,500EUR</p>
+      </section>
+      <section class="transactions">
+        <div class="transactions-total">
+          <div class="movements movements--deposit">
+            <p class="transaction-type">1 deposit</p>
+            <p class="date">08/08/24</p>
+            <p class="amount">200 <span>€</span></p>
+          </div>
+          <div class="movements movements--withdrawal">
+            <p class="transaction-type">2 withdrawal</p>
+            <p class="date">08/08/24</p>
+            <p class="amount">100 <span>€</span></p>
+          </div>
+        </div>
+      </section>
+      <div class="transfer actions">
+        <h2>Transfer Money</h2>
+        <form action="">
+          <div class="form transfer-money">
+            <input
+              type="text"
+              id="user"
+              name="username"
+              class="form__input transfer_to"
+            />
+            <input
+              type="text"
+              id="amount"
+              name="amount"
+              class="form__input transfer_amt"
+            />
+            <button class="btn-enter transferbtn">&rarr;</button>
+            <label for="username">Transfer to:</label>
+            <label for="amount">Amount</label>
+          </div>
+        </form>
+      </div>
+      <div class="loan actions">
+        <h2>Request Loan</h2>
+        <form action="">
+          <div class="form transfer-money">
+            <input type="text" name="amount" class="form__input loanAmt" />
+            <button class="btn-enter loanBtn">&rarr;</button>
+            <label class="loan-amount" for="username">Amount</label>
+          </div>
+        </form>
+      </div>
+      <div class="close-acc actions">
+        <h2>Close Account</h2>
+        <form action="">
+          <div class="form request-loan">
+            <input
+              type="text"
+              id="username"
+              class="form__input username_close"
+            />
+            <input
+              type="password"
+              maxlength="6"
+              id="PIN"
+              class="form__input PIN_close"
+            />
+            <button class="btn-enter closeAccBtn">&rarr;</button>
+            <label for="username">Confirm user</label>
+            <label for="amount">Confirm PIN</label>
+          </div>
+        </form>
+      </div>
+
+      <section class="summary">
+        <div class="summary-details">
+          <p class="summary-param">IN <span class="inflow">0000</span></p>
+          <p class="summary-param">OUT <span class="outflow">0000</span></p>
+          <p class="summary-param">
+            INTEREST <span class="interest">0000</span>
+          </p>
+          <button class="sort">SORT <span>&darr;</span></button>
+        </div>
+        <p class="log-off-timer">
+          You will be logged out in <span class="timer">0</span> secs
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
